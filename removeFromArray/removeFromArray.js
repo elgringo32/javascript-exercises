@@ -1,12 +1,9 @@
-const removeFromArray = function(arr, int) {
-    for (i=0; i < arr.length; i++) {
-        if (arr[i] = int) {
-            arr = arr.splice(i,1);
-            return arr;
-        }
-    }
+const removeFromArray = function(...args) {
+    let newArray = args[0];
+    return newArray.filter(val => !args.includes(val))
+        
     
-    console.log(arr);
+    
 }
 
 module.exports = removeFromArray
